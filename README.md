@@ -21,7 +21,17 @@ $ mplayer recording.mp4
 
 ## API
 
-*We need some more input for this. Too many flavours out there*
+`screen-stream` exports a single method, which creates a new live stream of your
+display.
+
+Stream your live screen to e.g. an HTTP endpoint!
+
+``js
+var screen = require('screen-stream')
+var request = require('request')
+
+screen().pipe(request.put("http://my.website.com/live_stream_feed"))
+``
 
 ## Contributing
 
@@ -30,5 +40,3 @@ Pull requests and stars are always welcome. For bugs and feature requests,
 
 Please use [standard Javascript](https://github.com/feross/standard) in your pull requests.
 
-# TODO: support osx and windows
-see https://trac.ffmpeg.org/wiki/Capture/Desktop
