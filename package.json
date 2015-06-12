@@ -5,6 +5,9 @@
   "repository": {
     "url": "git://github.com/noffle/screen-stream.git"
   },
+  "bin": {
+    "screen-stream": "./bin/cmd.js"
+  },
   "main": "index.js",
   "scripts": {
     "test": "standard"
@@ -14,5 +17,6 @@
   },
   "devDependencies": {
     "tape": "*"
-  }
+  },
+  "license": "MIT"
 }

@@ -25,8 +25,6 @@ $ npm install -g screen-stream
 Then freely pipe the stream anywhere!
 
 ```sh
-$ npm install -g screen-stream
-
 $ screen-stream > recording.mp4
 ^C
 
