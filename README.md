@@ -11,6 +11,10 @@ Trivially get a video stream of your computer's display.
 npm install screen-stream
 ```
 
+You will also need `ffmpeg` installed and accessible from the command line.
+
+Linux only so far! :O
+
 ## CLI Usage
 ```sh
 $ screen-stream > recording.mp4
@@ -26,12 +30,18 @@ display.
 
 Stream your live screen to e.g. an HTTP endpoint!
 
-``js
+```js
 var screen = require('screen-stream')
 var request = require('request')
 
 screen().pipe(request.put("http://my.website.com/live_stream_feed"))
-``
+```
+
+## Limitations
+
+ * Linux support only so far
+ * Requires a pre-existing ffmpeg install that's setup on your command line
+ * No way to customize output (size, bitrate, format, etc)
 
 ## Contributing
 
@@ -39,4 +49,5 @@ Pull requests and stars are always welcome. For bugs and feature requests,
 [please create an issue](https://github.com/noffle/screen-stream/issues/new).
 
 Please use [standard Javascript](https://github.com/feross/standard) in your pull requests.
+
 
