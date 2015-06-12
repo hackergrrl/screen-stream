@@ -1,7 +1,7 @@
 {
   "name": "screen-stream",
   "description": "Get a video stream of your computer's display.",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "repository": {
     "url": "git://github.com/noffle/screen-stream.git"
   },
