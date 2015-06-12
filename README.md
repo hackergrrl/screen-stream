@@ -2,7 +2,6 @@
 
 Trivially get a video stream of your computer's display.
 
-## todo: standard + test
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 ## Install
@@ -16,7 +15,18 @@ You will also need `ffmpeg` installed and accessible from the command line.
 Linux only so far! :O
 
 ## CLI Usage
+
+Remember to install globally so you can access the screen-stream command:
+
 ```sh
+$ npm install -g screen-stream
+```
+
+Then freely pipe the stream anywhere!
+
+```sh
+$ npm install -g screen-stream
+
 $ screen-stream > recording.mp4
 ^C
 
