@@ -1,0 +1,18 @@
+{
+  "name": "screen-stream",
+  "description": "Get a video stream of your computer's display.",
+  "version": "0.0.0",
+  "repository": {
+    "url": "git://github.com/noffle/screen-stream.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "dependencies": {
+    "exec-stream": "^0.1.0"
+  },
+  "devDependencies": {
+    "tape": "*"
+  }
+}
