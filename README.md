@@ -1,6 +1,6 @@
 # screen-stream
 
-Trivially get a video stream of your computer's display.
+Provides a video stream of your computer's display.
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
