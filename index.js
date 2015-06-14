@@ -1,13 +1,10 @@
+var os = require('os')
 var exec = require('exec-stream')
 var spawn = require('child_process').spawn
 
 module.exports = function (opts) {
 
   var cmd = "ffmpeg"
-
-  var captureVideoDevice = "x11grab"
-  var captureAudioDevice = "pulse"
-  var display = ":0.0"
 
   opts = opts || {}
   opts.fps = opts.fps || 20
@@ -17,11 +14,20 @@ module.exports = function (opts) {
   opts.audioRate = opts.audioRate || 44100
   opts.videoCodec = opts.videoCodec || 'libx264'
 
+  // Platform-specific junk
+  if (os.platform() === 'linux') {
+    opts.captureVideoDevice = "x11grab"
+    opts.captureAudioDevice = "pulse"
+    opts.display = ":0.0"
+  } else {
+    throw new Error(os.platform() + ' not yet supported!')
+  }
+
   var params = [
-    '-f',           captureVideoDevice,
+    '-f',           opts.captureVideoDevice,
     '-s',           opts.resolution,
     '-r',           opts.fps,
-    '-i',           display,
+    '-i',           opts.display,
     '-f',           'alsa',
     '-i',           'pulse',
     '-f',           'flv',
